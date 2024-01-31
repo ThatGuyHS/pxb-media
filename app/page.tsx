@@ -2,6 +2,7 @@ import React from 'react';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
 import FeatureSection from './components/feature-section';
+import ServicesSection from './components/services-section';
 
 const HeroSection = () => {
   return (
@@ -62,6 +63,7 @@ const HeroSection = () => {
       
     </div>
     <FeatureSection />
+    <ServicesSection />
     </>
   );
 };
