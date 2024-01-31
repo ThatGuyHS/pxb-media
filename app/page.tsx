@@ -1,9 +1,11 @@
 import React from 'react';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
+import FeatureSection from './components/feature-section';
 
 const HeroSection = () => {
   return (
+    <>
     <div className="relative bg-black text-white overflow-hidden">
       {/* Background Video */}
       <video
@@ -57,7 +59,10 @@ const HeroSection = () => {
           <p className="text-center">SCROLL DOWN</p>
         </div>
       </div>
+      
     </div>
+    <FeatureSection />
+    </>
   );
 };
 
