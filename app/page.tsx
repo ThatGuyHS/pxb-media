@@ -3,6 +3,9 @@ import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/f
 import { IoIosArrowDown } from 'react-icons/io';
 import FeatureSection from './components/feature-section';
 import ServicesSection from './components/services-section';
+import RecentWorkSection from './components/recent-work-section';
+import NewsSection from './components/news-section';
+import Footer from './components/footer';
 
 const HeroSection = () => {
   return (
@@ -64,6 +67,9 @@ const HeroSection = () => {
     </div>
     <FeatureSection />
     <ServicesSection />
+    <RecentWorkSection  />
+    <NewsSection />
+    <Footer />
     </>
   );
 };
