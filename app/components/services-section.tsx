@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 
 const ServicesSection = () => {
   return (
@@ -28,7 +29,9 @@ const ServicesSection = () => {
               <div className="p-8 border border-gray-800 rounded-lg">
                 <div className="mb-4">
                   {/* Placeholder for Icon */}
-                  <div className="w-12 h-12 bg-yellow-400 inline-block"></div>
+                  <div className="w-12 h-12"> 
+                  <VideoCameraBackIcon fontSize='large' />
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3">Big scale esport events and projects, but easier.</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
