@@ -3,6 +3,7 @@ import Image from "next/image";
 import Logo from '../assets/logo.svg'; // Adjust the path as necessary
 import SwedenOutline from '../../public/sweden.svg' // Adjust the path as necessary
 import SwedenFlag from '../../public/Flag_of_Sweden.svg' // Adjust the path as necessary
+import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -26,6 +27,13 @@ const Footer = () => {
                 <li>Payments</li>
                 <li>Contact</li>
               </ul>
+              <div className="flex space-x-3">
+            {/* Social Icons */}
+            <FaTwitter className="hover:text-gray-300" />
+            <FaFacebookF className="hover:text-gray-300" />
+            <FaInstagram className="hover:text-gray-300" />
+            <FaLinkedinIn className="hover:text-gray-300" />
+          </div>
             </div>
           </div>
           <div className="flex items-center mb-4 lg:mb-0 lg:ml-auto"> {/* Adjust for proper alignment */}

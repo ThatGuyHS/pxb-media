@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef } from 'react';
-import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+
 import { IoIosArrowDown } from 'react-icons/io';
 import FeatureSection from './components/feature-section';
 import ServicesSection from './components/services-section';
@@ -61,13 +61,7 @@ const HeroSection = () => {
           <h1 className="text-5xl font-bold text-center mb-6">
             Your crazy cool title about your crazy cool site
           </h1>
-          <div className="flex space-x-3">
-            {/* Social Icons */}
-            <FaTwitter className="hover:text-gray-300" />
-            <FaFacebookF className="hover:text-gray-300" />
-            <FaInstagram className="hover:text-gray-300" />
-            <FaLinkedinIn className="hover:text-gray-300" />
-          </div>
+          
         </div>
 
         {/* Scroll Down Indicator */}
