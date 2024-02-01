@@ -13,6 +13,7 @@ const contentful = require('contentful');
 
 const HeroSection = () => {
   const [selectedCases, setSelectedCases] = useState([]);
+  const [selectedNews, setSelectedNews] = useState([]);
 
   // Create a Contentful client instance
   const client = contentful.createClient({
@@ -20,6 +21,37 @@ const HeroSection = () => {
     accessToken: 'UgzzqHTBZpQyCpNWX0i86LScGiO8Lr8j2KcUCGPn6Ys', // Replace with your access token
     host: "cdn.contentful.com"
   });
+
+  function mapContentfulResponseToArray(response: any) {
+    let mappedData = [];
+  
+    if (response && response.items && response.items.length > 0) {
+      mappedData = response.items.map((article: any) => {
+        const articleFields = article.fields;
+  
+        // Extracting the title and excerpt
+        const title = articleFields.title;
+        const excerpt = articleFields.excerpt;
+  
+        // Extracting the body text
+        const body = articleFields.body.content.map((paragraph: any) => 
+          paragraph.content.map((textNode: any) => textNode.value).join('')
+        ).join('\n');
+  
+        // Mapping the cover image URL
+        let coverImageUrl = '';
+        const coverImageId = articleFields.coverImage.sys.id;
+        const coverImageAsset = response.includes.Asset.find((asset: any) => asset.sys.id === coverImageId);
+        if (coverImageAsset) {
+          coverImageUrl = `https:${coverImageAsset.fields.file.url}`;
+        }
+  
+        return { title, excerpt, body, coverImageUrl };
+      });
+    }
+  
+    return mappedData;
+  }
 
   function mapContentfulResponse(response: any) {
     const { items, includes: { Asset: assets } } = response;
@@ -44,9 +76,20 @@ const HeroSection = () => {
       limit: 1000, // Optional: Adjust the limit as needed, up to 1000
     })
     .then((response: any) => {
-      const mappedContentfulResponse = mapContentfulResponse(response);
-      setSelectedCases(mappedContentfulResponse);
-      console.log(mappedContentfulResponse, "mappedContentfulResponse"); // Log here to avoid dependency on selectedCases state
+      console.log(response, "response");
+    })
+    .catch(console.error); // Handle errors
+  }
+
+  function fetchNewsEntriesOfModel(contentTypeId: any) {
+    client.getEntries({
+      content_type: contentTypeId, // Filter by Content Type ID
+      limit: 1000, // Optional: Adjust the limit as needed, up to 1000
+    })
+    .then((response: any) => {
+      const mappedContentfulResponse = mapContentfulResponseToArray(response);
+      setSelectedNews(mappedContentfulResponse);
+      console.log(mappedContentfulResponse, "mappedContentfulResponseWithNews"); // Log here to avoid dependency on selectedCases state
     })
     .catch(console.error); // Handle errors
   }
@@ -59,6 +102,11 @@ const HeroSection = () => {
   useEffect(() => {
     console.log(selectedCases); // This will log the updated state whenever selectedCases changes
   }, [selectedCases]);
+
+  useEffect(() => {
+    const contentTypeId = 'pxbMediaNewsArticle'; // Replace with your model's Content Type ID
+    fetchNewsEntriesOfModel(contentTypeId);
+  }, []); // Empty dependency array means this effect runs once after the initial render
   
 
   const featureSectionRef = useRef(null);
@@ -74,7 +122,7 @@ const HeroSection = () => {
     });
   };
 
-  console.log(selectedCases, "selectedCases");
+  
 
   return (
     <>
