@@ -28,7 +28,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="relative bg-black text-white overflow-hidden">
+      <div className="relative bg-[#1A1A1A] text-white overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -46,7 +46,7 @@ const HeroSection = () => {
         </video>
 
         {/* Overlay */}
-        <div className="absolute z-20 w-full h-full bg-black opacity-50"></div>
+        <div className="absolute z-20 w-full h-full bg-[#1A1A1A] opacity-50"></div>
 
         {/* Content */}
         <div className="container mx-auto px-4 py-6 relative z-30">

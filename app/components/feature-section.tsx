@@ -17,7 +17,7 @@ const FeatureSection = () => {
         </div>
       </div>
       {/* Skewed Corner */}
-      <div className="absolute bottom-0 right-0 bg-black h-32 w-64" style={{ clipPath: 'polygon(0 100%, 100% 0, 100% 100%)' }}></div>
+      <div className="absolute bottom-0 right-0 bg-[#1A1A1A] h-32 w-64" style={{ clipPath: 'polygon(0 100%, 100% 0, 100% 100%)' }}></div>
     </div>
   );
 };

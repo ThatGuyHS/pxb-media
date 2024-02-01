@@ -2,7 +2,7 @@ import React from 'react';
 
 const RecentWorkSection = () => {
   return (
-    <div className="bg-black text-white py-12">
+    <div className="bg-[#1A1A1A] text-white py-12">
       <div className="container mx-auto px-4">
         {/* Header for Recent Work */}
         <div className="text-center mb-6">
