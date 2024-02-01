@@ -956,6 +956,9 @@ video {
 .underline {
   text-decoration-line: underline;
 }
+.decoration-\[\#2baaf1\] {
+  text-decoration-color: #2baaf1;
+}
 .opacity-50 {
   opacity: 0.5;
 }

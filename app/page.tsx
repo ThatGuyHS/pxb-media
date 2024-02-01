@@ -56,7 +56,7 @@ const HeroSection = () => {
             <div className="flex space-x-4">
               <a
                 className={`hover:text-gray-300 ${
-                  selectedLink === "#features" ? "underline" : ""
+                  selectedLink === "#features" ? "underline decoration-[#2baaf1]" : ""
                 }`}
                 href="#features"
                 onClick={() => {
@@ -68,7 +68,7 @@ const HeroSection = () => {
               </a>
               <a
                 className={`hover:text-gray-300 ${
-                  selectedLink === "#services" ? "underline" : ""
+                  selectedLink === "#services" ? "underline decoration-[#2baaf1]" : ""
                 }`}
                 href="#services"
                 onClick={() => { 
@@ -79,7 +79,7 @@ const HeroSection = () => {
               </a>
               <a
                 className={`hover:text-gray-300 ${
-                  selectedLink === "#ourwork" ? "underline" : ""
+                  selectedLink === "#ourwork" ? "underline decoration-[#2baaf1]" : ""
                 }`}
                 href="#ourwork"
                 onClick={() => {
@@ -90,7 +90,7 @@ const HeroSection = () => {
               </a>
               <a
                 className={`hover:text-gray-300 ${
-                  selectedLink === "#news" ? "underline" : ""
+                  selectedLink === "#news" ? "underline decoration-[#2baaf1]" : ""
                 }`}
                 href="#news"
                 onClick={() => {
