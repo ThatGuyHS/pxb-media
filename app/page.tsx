@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+
+import React, { useRef } from 'react';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
 import FeatureSection from './components/feature-section';
@@ -8,6 +10,20 @@ import NewsSection from './components/news-section';
 import Footer from './components/footer';
 
 const HeroSection = () => {
+  // Create refs for each section
+  const featureSectionRef = useRef(null);
+  const servicesSectionRef = useRef(null);
+  const recentWorkSectionRef = useRef(null);
+  const newsSectionRef = useRef(null);
+
+  // Function to scroll to a ref
+  const scrollToSection = (sectionRef: any) => {
+    window.scrollTo({
+      top: sectionRef.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
     <div className="relative bg-black text-white overflow-hidden">
@@ -32,12 +48,11 @@ const HeroSection = () => {
         <nav className="flex justify-between items-center">
           <div className="text-3xl">PXB MEDIA</div>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-gray-300">LOREM</a>
-            <a href="#" className="hover:text-gray-300">IPSUM</a>
-            <a href="#" className="hover:text-gray-300">DOLOR</a>
-            <a href="#" className="hover:text-gray-300">SIT</a>
-            <a href="#" className="hover:text-gray-300">AMET</a>
-            {/* Repeat for other nav items */}
+            <a href="#!" onClick={() => scrollToSection(featureSectionRef)} className="hover:text-gray-300">Features</a>
+            <a href="#!" onClick={() => scrollToSection(servicesSectionRef)} className="hover:text-gray-300">Services</a>
+            <a href="#!" onClick={() => scrollToSection(recentWorkSectionRef)} className="hover:text-gray-300">Our work</a>
+            <a href="#!" onClick={() => scrollToSection(newsSectionRef)} className="hover:text-gray-300">News</a>
+            {/* Implement scrolling for the Contact section if you have a ref for it */}
           </div>
         </nav>
 
@@ -63,12 +78,11 @@ const HeroSection = () => {
           <p className="text-center">SCROLL DOWN</p>
         </div>
       </div>
-      
     </div>
-    <FeatureSection />
-    <ServicesSection />
-    <RecentWorkSection  />
-    <NewsSection />
+    <div ref={featureSectionRef}><FeatureSection /></div>
+    <div ref={servicesSectionRef}><ServicesSection /></div>
+    <div ref={recentWorkSectionRef}><RecentWorkSection /></div>
+    <div ref={newsSectionRef}><NewsSection /></div>
     <Footer />
     </>
   );
