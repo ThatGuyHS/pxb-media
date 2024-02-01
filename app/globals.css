@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: "Campton";
+  src: url("../public/fonts/campton-black.otf");
+}

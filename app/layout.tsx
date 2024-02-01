@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="font-campton" lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );
