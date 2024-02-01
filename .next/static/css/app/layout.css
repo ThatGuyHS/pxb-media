@@ -888,6 +888,12 @@ video {
 .pt-12 {
   padding-top: 3rem;
 }
+.pr-10 {
+  padding-right: 2.5rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .text-center {
   text-align: center;
 }

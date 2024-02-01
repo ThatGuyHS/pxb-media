@@ -27,12 +27,17 @@ const Footer = () => {
                 <li>Payments</li>
                 <li>Contact</li>
               </ul>
-              <div className="flex space-x-3">
+              <div className="flex space-x-3 pt-10 pr-10">
             {/* Social Icons */}
+            <a href="https://twitter.com/pxbgg" className="hover:text-gray-300">
             <FaTwitter className="hover:text-gray-300" />
+            </a>
+            <a href="https://facebook.com/phoenixblue" className="hover:text-gray-300">
             <FaFacebookF className="hover:text-gray-300" />
+            </a>
+            <a href="https://instagram.com/phoenixbluegg" className="hover:text-gray-300">
             <FaInstagram className="hover:text-gray-300" />
-            <FaLinkedinIn className="hover:text-gray-300" />
+            </a>
           </div>
             </div>
           </div>
