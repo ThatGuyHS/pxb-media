@@ -119,7 +119,7 @@ const HeroSection = () => {
               <IoIosArrowDown />
             </span>
             
-            <p className="text-center">SCROLL DOWN</p>
+            <p className="text-center">READ MORE</p>
             
           </div>
           </button>

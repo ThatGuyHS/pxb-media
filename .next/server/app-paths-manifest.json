@@ -1,3 +1,5 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/slice-simulator/page": "app/slice-simulator/page.js",
+  "/case/[uid]/page": "app/case/[uid]/page.js"
 }
