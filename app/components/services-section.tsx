@@ -12,11 +12,11 @@ const ServicesSection = () => {
           </div>
           {/* Carousel controls */}
           <div className="flex">
-            <button className="mx-2 p-2 bg-yellow-400 rounded-full">
+            <button className="mx-2 p-2 bg-[#00abf5] rounded-full">
               {/* Replace with left arrow icon */}
               <span className="text-black">&lt;</span>
             </button>
-            <button className="mx-2 p-2 bg-yellow-400 rounded-full">
+            <button className="mx-2 p-2 bg-[#00abf5] rounded-full">
               {/* Replace with right arrow icon */}
               <span className="text-black">&gt;</span>
             </button>

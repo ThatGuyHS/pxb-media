@@ -38,10 +38,10 @@ const RecentWorkSection: React.FC<RecentWorkSectionProps> = ({ cases }) => {
           </div>
           {/* Carousel Controls */}
           <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-            <button className="text-yellow-400 mx-2 p-2">
+            <button className="text-[#00abf5] mx-2 p-2">
               <span className="text-2xl">&lt;</span>
             </button>
-            <button className="text-yellow-400 mx-2 p-2">
+            <button className="text-[#00abf5] mx-2 p-2">
               <span className="text-2xl">&gt;</span>
             </button>
           </div>

@@ -12,19 +12,19 @@ const NewsSection = () => {
           {[...Array(3)].map((_, index) => (
             <div key={index} className="max-w-sm">
               <div className="relative group">
-                <div className="absolute inset-0 bg-yellow-400 skew-y-3 group-hover:skew-y-0 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-[#00abf5] skew-y-3 group-hover:skew-y-0 transition-transform duration-300"></div>
                 <div className="relative bg-[#1A1A1A] p-4">
                   <div className="mb-4 h-48 bg-gray-800"></div> {/* Placeholder for the image */}
                   <h5 className="text-xl font-bold mb-2">Big scale esport events and projects, but easier.</h5>
                   <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <button className="text-yellow-400 border border-yellow-400 rounded px-4 py-2">Read more</button>
+                  <button className="text-[#00abf5] border border-[#00abf5] rounded px-4 py-2">Read more</button>
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div className="text-center mt-8">
-          <button className="bg-yellow-400 text-black px-6 py-2 rounded font-bold">ALL THE NEWS</button>
+          <button className="bg-[#00abf5]-400 text-black px-6 py-2 rounded font-bold">ALL THE NEWS</button>
         </div>
       </div>
     </div>

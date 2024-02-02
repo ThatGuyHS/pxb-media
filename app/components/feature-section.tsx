@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeatureSection = () => {
   return (
-    <div className="relative bg-yellow-300 pt-12 pb-32 overflow-hidden">
+    <div className="relative bg-[#00abf5] pt-12 pb-32 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center">
           <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
