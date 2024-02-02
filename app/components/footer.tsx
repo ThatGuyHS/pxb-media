@@ -29,7 +29,7 @@ const Footer = () => {
               </ul>
               <div className="flex space-x-3 pt-10 pr-10">
             {/* Social Icons */}
-            <a href="https://twitter.com/pxbgg" className="hover:text-gray-300">
+            <a href="https://twitter.com/pxbmedia" className="hover:text-gray-300">
             <FaTwitter className="hover:text-gray-300" />
             </a>
             <a href="https://facebook.com/phoenixblue" className="hover:text-gray-300">
