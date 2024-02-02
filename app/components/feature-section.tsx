@@ -9,7 +9,7 @@ const FeatureSection = () => {
             <h2 className="text-4xl font-bold mb-4">Big scale esport events and projects, but easier.</h2>
           </div>
           <div className="w-full lg:w-1/2">
-            <p className="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="mb-6"> Need a live broadcast team, tournament administrators or anything else to help with your event? We got you.</p>
             <button className="bg-black text-white font-bold py-2 px-4 rounded">
               ABOUT US
             </button>

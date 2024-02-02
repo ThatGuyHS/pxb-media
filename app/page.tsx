@@ -7,6 +7,7 @@ import ServicesSection from "./components/services-section";
 import RecentWorkSection from "./components/recent-work-section";
 import NewsSection from "./components/news-section";
 import Footer from "./components/footer";
+import Image from "next/image";
 
 // Import the Contentful client
 const contentful = require('contentful');
@@ -146,7 +147,10 @@ const HeroSection = () => {
 
         <div className="container mx-auto px-4 py-6 relative z-30">
           <nav className="flex justify-between items-center">
-            <div className="text-3xl">PXB MEDIA</div>
+            <div className="text-3xl">
+
+              <Image src="/pxb-media-logo.png" alt="PXB Media" width={150} height={50} />
+            </div>
             <div className="flex space-x-4">
             <a
                 className={`hover:text-gray-300 ${
@@ -200,7 +204,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col items-center justify-center h-screen">
             <h1 className="text-5xl font-bold text-center mb-6">
-              Your crazy cool title about your crazy cool site
+              We bring your ideas to life
             </h1>
           </div>
 
