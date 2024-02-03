@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { createClient } from 'contentful';
+import Link from 'next/link';
 
 // Create a Contentful client instance
 const client = createClient({
@@ -71,7 +72,9 @@ const ArticlesGrid = () => {
      <header className="flex justify-between items-center mb-8">
        <div className="logo">
          {/* Replace 'path/to/your/logo.svg' with the actual path to your logo image */}
+         <Link href="/">
          <img src="/pxb-media-logo.png" alt="Logo" className="h-10" />
+          </Link>
        </div>
        <h1 className="text-2xl font-bold text-center flex-1">PXB Media - News</h1>
      </header>
@@ -79,7 +82,9 @@ const ArticlesGrid = () => {
        {articles.map((article, index) => (
          <div key={index} className="border rounded-lg p-4 shadow-lg">
            {article.coverImageUrl && (
+            <Link href={`/news/${article.title}`}>
              <img src={article.coverImageUrl} alt={article.title} className="w-full h-48 object-cover object-center mb-4 rounded"/>
+            </Link>
            )}
            <h2 className="text-xl font-bold mb-2">{article.title}</h2>
            <p className="text-gray-700 text-base">{article.excerpt}</p>
