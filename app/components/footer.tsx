@@ -11,8 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start">
           <div className="flex">
-            {/* Links grouped together on the left */}
-            <div className="mr-8"> {/* Adjust margin as needed */}
+            <div className="mr-8">
               <h6 className="text-gray-400 font-bold uppercase">Pages</h6>
               <ul className="text-xs">
                 <li>Home</li>
@@ -27,7 +26,7 @@ const Footer = () => {
                 <li>Payments</li>
                 <li>Contact</li>
               </ul>
-              <div className="flex space-x-3 pt-10 pr-10">
+              <div className="flex space-x-3 pt-10">
             {/* Social Icons */}
             <a href="https://twitter.com/pxbmedia" className="hover:text-gray-300">
             <FaTwitter className="hover:text-gray-300" />
@@ -41,11 +40,6 @@ const Footer = () => {
           </div>
             </div>
           </div>
-          <div className="flex items-center mb-4 lg:mb-0 lg:ml-auto"> {/* Adjust for proper alignment */}
-            <p className="text-xs text-gray-400 ml-4">
-              Proudly built in Sweden
-            </p>
-          </div>
         </div>
         <div className="text-center text-gray-400 text-xs mt-8 lg:mt-4">
           <p>
@@ -54,9 +48,8 @@ const Footer = () => {
         </div>
       </div>
       {/* Sweden map at the bottom right */}
-      <div className="absolute right-4 bottom-4 lg:right-10 lg:bottom-10 transform rotate-3 flex items-center justify-center" style={{ width: '100px', height: '100px' }}>
-          <Image src={SwedenOutline} alt="Sweden outline" className="filter grayscale absolute z-10" width={100} height={100} />
-          <Image src={SwedenFlag} alt="Sweden flag" className="absolute z-20 opacity-75" width={100} height={100} />
+      <div className="absolute right-4 bottom-4 lg:right-10 lg:bottom-10 transform rotate-5 flex items-center justify-center" style={{ width: '100px', height: '100px' }}>
+          <Image src={SwedenOutline} alt="Sweden outline" className="filter grayscale absolute z-10" width={300} height={300} />
         </div>
     </footer>
   );

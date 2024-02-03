@@ -235,6 +235,17 @@ const HeroSection = () => {
       <div ref={newsSectionRef}>
         <NewsSection />
       </div>
+      <div className="flex bg-[#1A1A1A] pl-10 py-2 mb-4 lg:mb-0 lg:ml-auto"> {/* Adjust for proper alignment */}
+      <Image 
+        src="/Flag_of_Sweden.svg"
+        alt="Sweden flag"
+        width={30}
+        height={30}
+      />
+            <p className="text-xs ml-4">
+              Proudly built in Sweden
+            </p>
+          </div>
       <Footer />
     </>
   );

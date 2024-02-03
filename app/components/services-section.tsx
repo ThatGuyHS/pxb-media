@@ -43,7 +43,7 @@ const ServicesSection = () => {
           <div>
             <h2 className="text-3xl font-bold mb-2">Our services</h2>
             <p className="uppercase tracking-wide font-semibold">
-              Our knowledge
+              What we provide
             </p>
           </div>
         </div>
