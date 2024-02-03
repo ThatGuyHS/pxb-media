@@ -1,5 +1,6 @@
 import React from 'react';
 import { NewsCard } from '@/components/news-card';
+import Link from 'next/link';
 
 
 
@@ -29,7 +30,9 @@ const NewsSection: React.FC = () => {
           ))}
         </div>
         <div className="text-center mt-8">
-          <button className="bg-[#00abf5] text-black px-6 py-2 rounded font-bold">ALL THE NEWS</button>
+          <Link href="/news">
+          <button className="bg-[#00abf5] border border-[#00abf5] text-black px-6 py-2 rounded font-bold">ALL THE NEWS</button>
+          </Link>
         </div>
       </div>
     </div>
