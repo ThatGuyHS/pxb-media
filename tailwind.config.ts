@@ -19,6 +19,6 @@ const config: Config = {
       campton: ["Campton", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

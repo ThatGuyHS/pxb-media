@@ -78,6 +78,7 @@ const HeroSection = () => {
     })
     .then((response: any) => {
       console.log(response, "response");
+      setSelectedCases(mapContentfulResponse(response));
     })
     .catch(console.error); // Handle errors
   }

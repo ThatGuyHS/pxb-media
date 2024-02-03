@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface CaseItem {
   imageUrl: string;
@@ -21,32 +21,27 @@ const RecentWorkSection: React.FC<RecentWorkSectionProps> = ({ cases }) => {
           <h2 className="text-3xl font-bold mb-2">Recent Work</h2>
           <div className="uppercase tracking-wide font-semibold">Cases</div>
         </div>
-        
+
         {/* Carousel Placeholder */}
         <div className="relative">
           <div className="flex justify-center">
             {cases.map((caseItem, index) => (
-              <div key={index} className="w-1/4 h-64 bg-gray-800 mx-2" onClick={() => setSelectedCase(caseItem)}>
+              <div
+                key={index}
+                className="w-1/4 h-64 bg-gray-800 mx-2"
+                onClick={() => setSelectedCase(caseItem)}
+              >
                 <img
                   className="object-cover w-full h-full"
                   src={caseItem.imageUrl}
                   alt="case item"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 />
               </div>
             ))}
           </div>
-          {/* Carousel Controls */}
-          <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-            <button className="text-[#00abf5] mx-2 p-2">
-              <span className="text-2xl">&lt;</span>
-            </button>
-            <button className="text-[#00abf5] mx-2 p-2">
-              <span className="text-2xl">&gt;</span>
-            </button>
-          </div>
         </div>
-        
+
         {/* About This Project */}
         {selectedCase && (
           <div className="mt-12 text-center">
