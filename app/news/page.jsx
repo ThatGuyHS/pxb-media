@@ -38,6 +38,7 @@ const ArticlesGrid = () => {
        // Extracting the title and excerpt
        const title = articleFields.title;
        const excerpt = articleFields.excerpt || '';
+       const slug = articleFields.slug || '';
  
        // Extracting the body text
        const body = articleFields.body?.content.map((paragraph) => 
@@ -54,7 +55,7 @@ const ArticlesGrid = () => {
          }
        }
  
-       return { title, excerpt, body, coverImageUrl };
+       return { title, excerpt, body, coverImageUrl, slug };
      });
    }
  
@@ -82,7 +83,7 @@ const ArticlesGrid = () => {
        {articles.map((article, index) => (
          <div key={index} className="border rounded-lg p-4 shadow-lg">
            {article.coverImageUrl && (
-            <Link href={`/news/${article.title}`}>
+            <Link href={`/news/?slug=${article.slug}`}>
              <img src={article.coverImageUrl} alt={article.title} className="w-full h-48 object-cover object-center mb-4 rounded"/>
             </Link>
            )}
