@@ -83,7 +83,7 @@ const ArticlesGrid = () => {
          {articles.map((article, index) => (
            <div key={index} className="border border-gray-700 rounded-lg p-4 shadow-lg">
              {article.coverImageUrl && (
-              <Link legacyBehavior href={`/news/?slug=${article.slug}`}>
+              <Link legacyBehavior href={`/news/${article.slug}?slug=${article.slug}`}>
                <a>
                  <img src={article.coverImageUrl} alt={article.title} className="w-full h-48 object-cover object-center mb-4 rounded"/>
                </a>
