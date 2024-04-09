@@ -205,8 +205,11 @@ const HeroSection = () => {
 
           <div className="flex flex-col items-center justify-center h-screen">
             <h1 className="text-5xl font-bold text-center mb-6">
-              We bring your ideas to life
+             PXB Media - We bring your ideas to life
             </h1>
+            <p className="text-center max-w-2xl">
+              We are a team of creative professionals who are passionate about creating unique and engaging content. We specialize in live productions of all kinds and sizes.
+            </p>
           </div>
 
           <button onClick={() => scrollToSection(featureSectionRef)}>
