@@ -51,13 +51,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {/* Sweden map at the bottom right */}
-      {/* Sweden map at the bottom right, with adjusted size and rotation */}
-<div className="absolute right-4 bottom-4 lg:right-10 lg:bottom-10 flex items-center justify-center" 
-     style={{ width: '200px', height: '200px', transform: 'rotate(32deg)' }}>
-    <Image src="/sweden.svg" alt="Sweden outline" className="filter grayscale absolute z-10" width={360} height={360} />
-</div>
-
     </footer>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 interface CaseItem {
   imageUrl: string;
-  description: string; // Assuming every case item has a description
+  description: string;
 }
 
 interface RecentWorkSectionProps {
@@ -10,44 +10,43 @@ interface RecentWorkSectionProps {
 }
 
 const RecentWorkSection: React.FC<RecentWorkSectionProps> = ({ cases }) => {
-  // State to track the currently selected case
   const [selectedCase, setSelectedCase] = useState<CaseItem | null>(null);
 
   return (
     <div className="bg-[#1A1A1A] text-white py-12">
       <div className="container mx-auto px-4">
         {/* Header for Recent Work */}
-        <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold mb-2">Recent Work</h2>
-          <div className="uppercase tracking-wide font-semibold">Cases</div>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Recent Work</h2>
+          <div className="uppercase tracking-widest font-semibold text-gray-400">Showcase</div>
         </div>
 
-        {/* Carousel Placeholder */}
-        <div className="relative">
-          <div className="flex justify-center">
-            {cases.map((caseItem, index) => (
-              <div
-                key={index}
-                className="w-1/4 h-64 bg-gray-800 mx-2"
-                onClick={() => setSelectedCase(caseItem)}
-              >
-                <img
-                  className="object-cover w-full h-full"
-                  src={caseItem.imageUrl}
-                  alt="case item"
-                  style={{ cursor: "pointer" }}
-                />
+        {/* Carousel/Showcase */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          {cases.map((caseItem, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden cursor-pointer group"
+              onClick={() => setSelectedCase(caseItem)}
+            >
+              <img
+                className="object-cover w-full h-64 transition-transform duration-300 ease-in-out group-hover:scale-110"
+                src={caseItem.imageUrl}
+                alt="Showcase item"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-center justify-center">
+                <p className="text-sm font-medium px-4">View Project</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* About This Project */}
         {selectedCase && (
           <div className="mt-12 text-center">
-            <h3 className="text-3xl font-bold mb-2">About This Project</h3>
+            <h3 className="text-3xl font-bold mb-4">About This Project</h3>
             <hr className="border-gray-700 my-4" />
-            <p className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+            <p className="mx-auto max-w-4xl text-lg leading-relaxed">
               {selectedCase.description}
             </p>
           </div>
