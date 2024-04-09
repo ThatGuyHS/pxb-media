@@ -140,7 +140,7 @@ const HeroSection = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <source src="/festa.mp4" type="video/mp4" />
+          <source src="https://challengermode-permanent-assets.azureedge.net/heroes/PXB/pxb2_hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
